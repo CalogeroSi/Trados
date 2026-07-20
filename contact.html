@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Trados</title>
+
+  <!-- Шрифты с Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Наш CSS файл -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== ШАПКА ========== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Trados</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="about.html" class="nav__link">О нас</a>
+        <a href="projects.html" class="nav__link">Проекты</a>
+        <a href="contact.html" class="nav__link nav__link--active">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== КОНТАКТЫ ========== -->
+  <main class="contact">
+    <h1 class="contact__title">Свяжитесь с нами</h1>
+    <p class="contact__text">Выберите удобный способ связи — мы на связи и ответим как можно скорее.</p>
+
+    <!-- Сюда скрипт подставит выбранный товар (по умолчанию скрыто) -->
+    <p class="contact__order" id="order-note" style="display: none;"></p>
+
+    <div class="contact_grid">
+      <!-- EMAIL (Gmail): замените адрес в to= на свой -->
+      <a class="contact-btn contact-btn--email" id="btn-email"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=614000@mail.ru&su=Обращение%20с%20сайта%20Trados&body=Здравствуйте!"
+        target="_blank" rel="noopener">
+        ✉️ Написать на Email
+      </a>
+
+      <!-- TELEGRAM: замените username на свой (без @) -->
+      <a class="contact-btn contact-btn--telegram" id="btn-telegram"
+        href="https://t.me/ooonrsp" target="_blank" rel="noopener">
+        ✈️ Написать в Telegram
+      </a>
+
+      <!-- WHATSAPP: замените номер (только цифры, с кодом страны, без + и пробелов) -->
+      <a class="contact-btn contact-btn--whatsapp" id="btn-whatsapp"
+        href="https://wa.me/79028331795?text=Здравствуйте!%20Пишу%20с%20сайта%20Trados."
+        target="_blank" rel="noopener">
+        💬 Написать в WhatsApp
+      </a>
+    </div>
+  </main>
+
+  <!-- ========== ПОДВАЛ ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Trados. All rights reserved.</p>
+      <nav class="footer__nav">
+        <a href="about.html">О нас</a>
+        <a href="projects.html">Проекты</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Скрипт: подставляет выбранный товар в кнопки связи -->
+  <script src="js/main.js"></script>
+</body>
+</html>

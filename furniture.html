@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог мебели Trados — сдержанно, классически, на годы">
+  <title>Мебель — Trados</title>
+
+  <!-- Шрифты с Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Наш CSS файл -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== ШАПКА ========== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Trados</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="about.html" class="nav__link">О нас</a>
+        <a href="projects.html" class="nav__link">Проекты</a>
+        <a href="contact.html" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== КАТАЛОГ МЕБЕЛИ ========== -->
+  <section class="catalog">
+    <div class="container">
+
+      <div class="catalog__head">
+        <h1 class="catalog__title">Мебель</h1>
+        <p class="catalog__subtitle">Гардероб и интерьер на одном языке — чистые линии, ничего лишнего.</p>
+      </div>
+
+      <div class="catalog__grid">
+
+        <!-- Товар -->
+        <article class="product">
+          <div class="product__media">
+            <img src="images/chear.png" alt="Мебель Trados">
+          </div>
+          <div class="product__body">
+            <h3 class="product__name">Название</h3>
+            <p class="product__tag">Тип · материал</p>
+            <div class="product__footer">
+              <span class="product__price">— ₽</span>
+              <a href="contact.html" class="product__btn">Заказать</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ШАБЛОН НОВОГО ТОВАРА — скопируй блок ниже, вставь картинку в папку images/
+             и замени название/тег/цену.
+        <article class="product">
+          <div class="product__media">
+            <img src="images/ФАЙЛ.png" alt="Название">
+          </div>
+          <div class="product__body">
+            <h3 class="product__name">Название</h3>
+            <p class="product__tag">Тип · материал</p>
+            <div class="product__footer">
+              <span class="product__price">0000 ₽</span>
+              <a href="contact.html" class="product__btn">Заказать</a>
+            </div>
+          </div>
+        </article>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ПОДВАЛ ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Trados. All rights reserved.</p>
+      <nav class="footer__nav">
+        <a href="about.html">О нас</a>
+        <a href="projects.html">Проекты</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Скрипт: прошивает название товара в кнопку «Заказать» -->
+  <script src="js/main.js"></script>
+</body>
+</html>

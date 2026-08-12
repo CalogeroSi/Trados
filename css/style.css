@@ -236,10 +236,6 @@ a {
   max-height: 500px;
   width: auto;
   height: 100%;
-
-  /* Горизонтальное фото не вылезает за свою колонку, а аккуратно кадрируется */
-  max-width: 100%;
-  object-fit: cover;
 }
 
 
@@ -340,6 +336,10 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+
+  /* Карточки тянутся по своему содержимому.
+     Без этого раскрытое описание растянуло бы весь ряд. */
+  align-items: start;
 }
 
 /* Карточка товара */
@@ -393,6 +393,45 @@ a {
   font-size: 13px;
   color: var(--color-muted);
   margin-bottom: 14px;
+}
+
+
+/* Описание товара — свёрнуто, раскрывается по клику (тег <details>) */
+.product__more {
+  margin-bottom: 14px;
+}
+
+/* Строка «Описание», по которой кликают */
+.product__more summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-accent);
+
+  /* Убираем стандартный треугольник браузера */
+  list-style: none;
+}
+
+/* Тот же треугольник в Safari прячется отдельно */
+.product__more summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Рисуем свою стрелку: вниз — закрыто, вверх — открыто */
+.product__more summary::after {
+  content: ' ▾';
+}
+
+.product__more[open] summary::after {
+  content: ' ▴';
+}
+
+/* Сам текст описания */
+.product__more p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-muted);
+  margin-top: 8px;
 }
 
 .product__footer {
